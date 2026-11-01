@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Davao Mission Barnabas",
+    "slug": "davao-mission-barnabas",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "davaomissionbarnabas",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.davaomission.barnabas"
+    },
+    "android": {
+      "package": "com.davaomission.barnabas",
+      "adaptiveIcon": {
+        "backgroundColor": "#2B1B6B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B1033",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220
+        }
+      ]
+    ]
+  }
+}
