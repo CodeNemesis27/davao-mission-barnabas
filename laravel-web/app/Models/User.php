@@ -18,6 +18,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use Laravel\Sanctum\HasApiTokens;
 
 /**
  * @property int $id
@@ -37,7 +38,12 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 class User extends Authenticatable implements FilamentUser, HasAppAuthentication, HasAppAuthenticationRecovery
 {
     /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable, TwoFactorAuthenticatable, InteractsWithAppAuthentication, InteractsWithAppAuthenticationRecovery;
+    use HasFactory,
+        Notifiable,
+        TwoFactorAuthenticatable,
+        InteractsWithAppAuthentication,
+        InteractsWithAppAuthenticationRecovery,
+        HasApiTokens;
 
     /**
      * Get the attributes that should be cast.
